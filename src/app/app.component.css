@@ -1,0 +1,10 @@
+/* Global app container styling if needed */
+:host {
+  display: block;
+  min-height: 100vh;
+  background: #f7fafc;
+  margin: 0 !important;
+}
+body {
+    margin: 0 !important;
+}

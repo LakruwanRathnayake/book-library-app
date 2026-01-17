@@ -1,0 +1,41 @@
+<!-- header.component.html - WITH PRIMENG ICONS -->
+<header class="app-header" [class.scrolled]="isScrolled">
+    <div class="header-container">
+        <!-- Logo/Title -->
+        <div class="logo-section" (click)="navigateHome()">
+            <div class="logo-icon img-style"><img src="../../../assets/logo.png" alt=""></div>
+            <h1 class="app-title">Book Library</h1>
+        </div>
+
+        <!-- Search & Controls -->
+        <div class="controls-section">
+            <!-- Search Bar -->
+            <div class="search-container">
+                <i class="pi pi-search search-icon"></i>
+                <input #searchInput type="text" class="search-input" placeholder="Search by title or author..."
+                    [value]="searchTerm" (input)="onSearch()">
+                <i class="pi pi-times search-clear" *ngIf="searchTerm" (click)="clearSearch()"></i>
+            </div>
+
+            <!-- View Toggle Button Group -->
+            <div class="view-toggle-group">
+                <button class="view-option-btn" [class.active]="viewMode === 'grid'" (click)="setViewMode('grid')"
+                    aria-label="Grid View">
+                    <i class="pi pi-th-large"></i>
+                    <span class="label">Grid</span>
+                </button>
+                <button class="view-option-btn" [class.active]="viewMode === 'list'" (click)="setViewMode('list')"
+                    aria-label="List View">
+                    <i class="pi pi-list"></i>
+                    <span class="label">List</span>
+                </button>
+            </div>
+
+            <!-- Add Book Button -->
+            <button class="add-book-btn" (click)="onAddBook()">
+                <i class="pi pi-plus"></i>
+                <span class="label">Add Book</span>
+            </button>
+        </div>
+    </div>
+</header>

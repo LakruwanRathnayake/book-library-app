@@ -1,0 +1,32 @@
+<!-- book-card.component.html - TOP-RIGHT BUTTONS -->
+<div [class]="'book-card ' + viewMode">
+  <!-- TOP-RIGHT ACTION BUTTONS -->
+  <div class="card-actions-top">
+    <button class="action-btn edit-btn" (click)="onEdit()" title="Edit">
+      <i class="pi pi-pencil"></i>
+    </button>
+    <button class="action-btn delete-btn" (click)="onDelete()" title="Delete">
+      <i class="pi pi-trash"></i>
+    </button>
+  </div>
+  
+  <!-- Cover -->
+  <div class="book-cover">
+    <img [src]="book.coverImage" [alt]="book.title" (error)="onImageError($event)" />
+  </div>
+  
+  <!-- Details -->
+  <div class="book-details">
+    <h3 class="book-title">{{ book.title }}</h3>
+    <p class="book-author">by {{ book.author }}</p>
+    <div class="book-meta">
+      <span class="book-category">{{ book.category }}</span>
+      <div class="book-rating">
+        <span *ngFor="let star of stars" class="star">
+          {{ getStarIcon(star) }}
+        </span>
+        <span class="rating-value">({{ book.rating }})</span>
+      </div>
+    </div>
+  </div>
+</div>

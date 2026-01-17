@@ -1,0 +1,180 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "coverImage": "/assets/The_Great_Gatsby.jpg",
+      "rating": 4.5,
+      "category": "Classic"
+    },
+    {
+      "id": "2",
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "coverImage": "/assets/To_Kill_a_Mockingbird.jpg",
+      "rating": 4.8,
+      "category": "Classic"
+    },
+    {
+      "id": "3",
+      "title": "1984",
+      "author": "George Orwell",
+      "coverImage": "/assets/1984.jpg",
+      "rating": 4.6,
+      "category": "Science Fiction"
+    },
+    {
+      "id": "4",
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "coverImage": "/assets/Pride_and_Prejudice.jpg",
+      "rating": 4.7,
+      "category": "Romance"
+    },
+    {
+      "id": "5",
+      "title": "Harry Potter and the Philosopher's Stone",
+      "author": "J.K. Rowling",
+      "coverImage": "/assets/Harry_potter.jpg",
+      "rating": 4.9,
+      "category": "Fantasy"
+    },
+    {
+      "id": "6",
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "coverImage": "/assets/The Hobbit.jpg",
+      "rating": 4.8,
+      "category": "Fantasy"
+    },
+    {
+      "id": "7",
+      "title": "The Da Vinci Code",
+      "author": "Dan Brown",
+      "coverImage": "/assets/The Da Vinci Code.jpg",
+      "rating": 4.3,
+      "category": "Mystery"
+    },
+    {
+      "id": "8",
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "coverImage": "/assets/The Catcher in the Rye.jpg",
+      "rating": 4.2,
+      "category": "Classic"
+    },
+    {
+      "id": "9",
+      "title": "The Hunger Games",
+      "author": "Suzanne Collins",
+      "coverImage": "/assets/The Hunger Games.jpg",
+      "rating": 4.6,
+      "category": "Science Fiction"
+    },
+    {
+      "id": "10",
+      "title": "The Lord of the Rings",
+      "author": "J.R.R. Tolkien",
+      "coverImage": "/assets/The Lord of the Rings.jpg",
+      "rating": 4.9,
+      "category": "Fantasy"
+    },
+    {
+      "id": "11",
+      "title": "Gone Girl",
+      "author": "Gillian Flynn",
+      "coverImage": "/assets/Gone Girl.jpg",
+      "rating": 4.4,
+      "category": "Thriller"
+    },
+    {
+      "id": "12",
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "coverImage": "/assets/The Alchemist.jpg",
+      "rating": 4.5,
+      "category": "Self-Help"
+    },
+    {
+      "id": "13",
+      "title": "Sapiens: A Brief History of Humankind",
+      "author": "Yuval Noah Harari",
+      "coverImage": "/assets/A Brief History of Humankind.jpg",
+      "rating": 4.7,
+      "category": "History"
+    },
+    {
+      "id": "14",
+      "title": "The Fault in Our Stars",
+      "author": "John Green",
+      "coverImage": "/assets/The_Fault_in_Our_Stars.jpg",
+      "rating": 4.6,
+      "category": "Romance"
+    },
+    {
+      "id": "15",
+      "title": "Steve Jobs",
+      "author": "Walter Isaacson",
+      "coverImage": "/assets/Steve_Jobs.jpg",
+      "rating": 4.5,
+      "category": "Biography"
+    },
+    {
+      "id": "16",
+      "title": "The Girl with the Dragon Tattoo",
+      "author": "Stieg Larsson",
+      "coverImage": "/assets/The_Girl_with_the_Dragon_Tattoo.jpg",
+      "rating": 4.4,
+      "category": "Mystery"
+    },
+    {
+      "id": "17",
+      "title": "Dune",
+      "author": "Frank Herbert",
+      "coverImage": "/assets/Dune.jpg",
+      "rating": 4.7,
+      "category": "Science Fiction"
+    },
+    {
+      "id": "18",
+      "title": "The Shining",
+      "author": "Stephen King",
+      "coverImage": "/assets/The_Shining.jpg",
+      "rating": 4.5,
+      "category": "Thriller"
+    },
+    {
+      "id": "19",
+      "title": "Becoming",
+      "author": "Michelle Obama",
+      "coverImage": "/assets/Becoming.jpg",
+      "rating": 4.8,
+      "category": "Biography"
+    },
+    {
+      "id": "20",
+      "title": "The Silent Patient",
+      "author": "Alex Michaelides",
+      "coverImage": "/assets/The_Silent_Patient.jpg",
+      "rating": 4.6,
+      "category": "Thriller"
+    },
+    {
+      "id": "21",
+      "title": "Educated",
+      "author": "Tara Westover",
+      "coverImage": "/assets/Educated.jpg",
+      "rating": 4.7,
+      "category": "Biography"
+    },
+    {
+      "id": "22",
+      "title": "The Martian",
+      "author": "Andy Weir",
+      "coverImage": "/assets/The_Martian.jpg",
+      "rating": 4.8,
+      "category": "Science Fiction"
+    }
+  ]
+}

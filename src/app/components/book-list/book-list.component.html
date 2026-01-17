@@ -1,0 +1,40 @@
+<div class="book-list-container">
+  <!-- Loading State -->
+  <div *ngIf="loading" class="loading">
+    <div class="spinner"></div>
+    <p>Loading books...</p>
+  </div>
+
+  <!-- Error Message -->
+  <div *ngIf="error" class="error-message">
+    <span class="error-icon">⚠️</span>
+    <p>{{ error }}</p>
+  </div>
+
+  <!-- No Books Message -->
+  <div *ngIf="!loading && filteredBooks.length === 0 && !error" class="no-books">
+    <p>📚 No books found. Start by adding some books!</p>
+  </div>
+
+  <!-- Books Grid/List -->
+  <div [class]="'books-container ' + viewMode" *ngIf="!loading && filteredBooks.length > 0">
+    <app-book-card
+      *ngFor="let book of filteredBooks"
+      [book]="book"
+      [viewMode]="viewMode"
+      (edit)="editBook(book)"
+      (delete)="deleteBook(book.id!)">
+    </app-book-card>
+  </div>
+
+  <!-- Book Form Modal -->
+  <div *ngIf="showForm" class="modal-overlay" (click)="cancelForm()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <app-book-form 
+        [book]="selectedBook"
+        (onSubmit)="saveBook($event)"
+        (onCancel)="cancelForm()">
+      </app-book-form>
+    </div>
+  </div>
+</div>

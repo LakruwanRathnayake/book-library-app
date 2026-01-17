@@ -1,0 +1,129 @@
+<!-- book-form.component.html - WITH IMAGE UPLOAD -->
+<div class="book-form-modal">
+  <div class="form-header">
+    <i class="pi pi-book"></i>
+    <h2>{{ book ? 'Edit Book' : 'Add New Book' }}</h2>
+  </div>
+
+  <form [formGroup]="bookForm" (ngSubmit)="submitForm()" class="book-form">
+    <!-- Title & Author - Row 1 -->
+    <div class="form-row">
+      <div class="form-group">
+        <label>
+          <i class="pi pi-file-word"></i>
+          Title *
+        </label>
+        <input type="text" formControlName="title" placeholder="Enter book title"
+          [class.error]="submitted && title?.invalid">
+        <div *ngIf="submitted && title?.invalid" class="error-message">
+          Title is required (min 2 chars)
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>
+          <i class="pi pi-user"></i>
+          Author *
+        </label>
+        <input type="text" formControlName="author" placeholder="Enter author name"
+          [class.error]="submitted && author?.invalid">
+        <div *ngIf="submitted && author?.invalid" class="error-message">
+          Author is required (min 2 chars)
+        </div>
+      </div>
+    </div>
+
+    <!-- Image Upload Section -->
+    <div class="form-group full-width">
+      <label>
+        <i class="pi pi-image"></i>
+        Cover Image *
+      </label>
+
+      <!-- Upload Area -->
+      <div class="image-upload-container">
+        <!-- Preview -->
+        <div *ngIf="imagePreview" class="image-preview">
+          <img [src]="imagePreview" alt="Book cover preview" />
+          <button type="button" class="remove-image-btn" (click)="removeImage()">
+            <i class="pi pi-times"></i>
+          </button>
+        </div>
+
+        <!-- Upload Button -->
+        <div *ngIf="!imagePreview" class="upload-area">
+          <input type="file" id="fileInput" accept="image/jpeg,image/jpg,image/png,image/webp"
+            (change)="onFileSelected($event)" style="display: none;">
+          <label for="fileInput" class="upload-label">
+            <i class="pi pi-cloud-upload"></i>
+            <span>Click to upload image</span>
+            <small>JPG, PNG, WEBP (Max 5MB)</small>
+          </label>
+        </div>
+
+        <!-- Error Message -->
+        <div *ngIf="uploadError" class="upload-error">
+          <i class="pi pi-exclamation-triangle"></i>
+          {{ uploadError }}
+        </div>
+
+        <div *ngIf="submitted && coverImage?.invalid && !imagePreview" class="error-message">
+          Cover image is required
+        </div>
+      </div>
+    </div>
+
+    <!-- Category & Rating - Row 2 -->
+    <div class="form-row">
+      <div class="form-group">
+        <label>
+          <i class="pi pi-tags"></i>
+          Category *
+        </label>
+        <select formControlName="category" [class.error]="submitted && category?.invalid">
+          <option value="">Select category</option>
+          <option value="Classic">📖 Classic</option>
+          <option value="Science Fiction">🚀 Sci-Fi</option>
+          <option value="Fantasy">🧙 Fantasy</option>
+          <option value="Mystery">🔍 Mystery</option>
+          <option value="Romance">💕 Romance</option>
+          <option value="Thriller">😱 Thriller</option>
+          <option value="Biography">📘 Biography</option>
+          <option value="History">🏛️ History</option>
+          <option value="Self-Help">💡 Self-Help</option>
+          <option value="Other">📂 Other</option>
+        </select>
+        <div *ngIf="submitted && category?.invalid" class="error-message">
+          Category required
+        </div>
+      </div>
+
+      <div class="form-group rating-group">
+        <label>
+          <i class="pi pi-star-fill"></i>
+          Rating (0-5) *
+        </label>
+        <div class="rating-input">
+          <input type="number" formControlName="rating" min="0" max="5" step="0.1" class="rating-number"
+            [class.error]="submitted && rating?.invalid">
+          <span>/ 5</span>
+        </div>
+        <div *ngIf="submitted && rating?.invalid" class="error-message">
+          Rating 0-5 required
+        </div>
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="form-actions">
+      <button type="button" class="cancel-btn" (click)="cancel()">
+        <i class="pi pi-times"></i>
+        Cancel
+      </button>
+      <button type="submit" class="submit-btn">
+        <i class="pi pi-check"></i>
+        {{ book ? 'Update' : 'Add' }} Book
+      </button>
+    </div>
+  </form>
+</div>
