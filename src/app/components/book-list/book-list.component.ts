@@ -1,4 +1,3 @@
-// book-list.component.ts - COMPLETE UPDATED VERSION
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { BookService, Book } from '../../services/book.service';
 import { BookStateService } from '../../services/book-state.service';

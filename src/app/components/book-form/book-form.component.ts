@@ -1,4 +1,3 @@
-// book-form.component.ts - WITH IMAGE UPLOAD
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Book } from '../../services/book.service';

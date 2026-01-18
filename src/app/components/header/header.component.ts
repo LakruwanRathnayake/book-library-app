@@ -1,6 +1,5 @@
 import { Component, HostListener, OnDestroy, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
-import { FormsModule } from '@angular/forms'; // ADD THIS
 import { BookStateService } from '../../services/book-state.service';
 import { filter, Subscription } from 'rxjs';
 
@@ -8,7 +7,7 @@ import { filter, Subscription } from 'rxjs';
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
-  standalone: false // or true if using standalone
+  standalone: false
 })
 export class HeaderComponent implements OnDestroy, AfterViewInit {
   @ViewChild('searchInput') searchInput!: ElementRef<HTMLInputElement>;
@@ -41,7 +40,7 @@ export class HeaderComponent implements OnDestroy, AfterViewInit {
   onWindowScroll() {
     this.isScrolled = window.pageYOffset > 20;
   }
-  onSearch(): void {  // Remove $event parameter
+  onSearch(): void { 
     const input = this.searchInput.nativeElement;
     this.searchTerm = input.value;
     this.bookState.setSearchTerm(this.searchTerm);
@@ -66,9 +65,6 @@ export class HeaderComponent implements OnDestroy, AfterViewInit {
   navigateHome(): void {
     this.router.navigate(['/books']);
   }
-
-  // header.component.ts - CORRECT onSearch method
-
 
 
   ngOnDestroy(): void {

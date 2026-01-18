@@ -22,7 +22,7 @@
       "author": "George Orwell",
       "coverImage": "/assets/1984.jpg",
       "rating": 4.6,
-      "category": "Science Fiction"
+      "category": "Sci-Fi"
     },
     {
       "id": "4",
@@ -70,7 +70,7 @@
       "author": "Suzanne Collins",
       "coverImage": "/assets/The Hunger Games.jpg",
       "rating": 4.6,
-      "category": "Science Fiction"
+      "category": "Sci-Fi"
     },
     {
       "id": "10",
@@ -134,7 +134,7 @@
       "author": "Frank Herbert",
       "coverImage": "/assets/Dune.jpg",
       "rating": 4.7,
-      "category": "Science Fiction"
+      "category": "Sci-Fi"
     },
     {
       "id": "18",
@@ -161,12 +161,12 @@
       "category": "Thriller"
     },
     {
-      "id": "21",
       "title": "Educated",
       "author": "Tara Westover",
       "coverImage": "/assets/Educated.jpg",
-      "rating": 4.7,
-      "category": "Biography"
+      "rating": 3.7,
+      "category": "Biography",
+      "id": "21"
     },
     {
       "id": "22",
@@ -174,7 +174,7 @@
       "author": "Andy Weir",
       "coverImage": "/assets/The_Martian.jpg",
       "rating": 4.8,
-      "category": "Science Fiction"
+      "category": "Sci-Fi"
     }
   ]
 }
